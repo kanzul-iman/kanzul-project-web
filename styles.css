@@ -404,3 +404,57 @@ footer a{
     width: 100%;
     border-radius: 10px;
 }
+/* Responsive Design */
+
+/* For small screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .dashboard, .profile, .courses, .reminders, .card {
+        width: 90%;
+        padding: 15px;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    #theme-toggle {
+        margin-top: 10px;
+    }
+
+    .course {
+        width: 100%;
+    }
+}
+
+/* For tablets and medium screens (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .dashboard, .profile, .courses, .reminders {
+        max-width: 80%;
+    }
+    .course {
+        width: 45%;
+    }
+}
+
+/* For very small screens (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .dashboard, .profile, .courses, .reminders {
+        width: 100%;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    #profilepic {
+        width: 120px;
+        height: 120px;
+    }
+}
