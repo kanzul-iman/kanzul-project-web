@@ -252,6 +252,7 @@ header {
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
+    
 }
 
 #upload-profile:hover {
@@ -373,4 +374,33 @@ footer a{
 .progress {
     height: 10px;
     background-color: #4caf50;
+}
+
+/* Quizzes Section */
+.quizzes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.quiz {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.quiz:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.quiz img {
+    width: 100%;
+    border-radius: 10px;
 }
