@@ -138,4 +138,38 @@ document.addEventListener("DOMContentLoaded", () => {
         let date = new Date(dateTime);
         return date.toLocaleString();
     }
+      document.addEventListener("DOMContentLoaded", () => {
+    function submitQuiz() {
+        let score = 0;
+        let totalQuestions = 2;
+
+        let answers = {
+            q1: "Paris",
+            q2: "4"
+        };
+
+        for (let key in answers) {
+            let selectedOption = document.querySelector(`input[name="${key}"]:checked`);
+            if (selectedOption && selectedOption.value === answers[key]) {
+                score++;
+            }
+        }
+
+        showPopup(`🎉 You got ${score} out of ${totalQuestions} correct!`);
+    }
+
+    function showPopup(message) {
+        const popup = document.getElementById("popup");
+        const popupText = document.getElementById("popup-text");
+
+        popupText.innerHTML = message;
+        popup.style.display = "block";
+    }
+
+    window.closePopup = function () {
+        document.getElementById("popup").style.display = "none";
+    };
+
+    window.submitQuiz = submitQuiz;
+});
 });
